@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="box" id = "heading">
+    <h1 > My To-Do List for : <br> <%= keyday %> </h1>
+    </div>
+
+    <div class="box">
+     <!-- <ul> -->
+        <% for (var i=0;i<newItemArrayInEjs.length;i++) {  %>
+            <div class="item">
+                <input type="checkbox">
+                  <p> <%= newItemArrayInEjs[i] %> </p>
+                </div>
+      <%  } %>
+        
+     <!-- </ul> -->
+    
+
+     <form action = "/" method = "POST">
+
+        <input type="text" name="new" placeholder="My Next Task Is.." autofocus autocomplete="off">
+        <button type ="submit" name="Add to List">+</button>
+    </form></div>
+    <!-- <% if (keyday === "Saturday" || keyday === "Sunday") { %>
+    <h1 style="color: purple"><%= keyday %> ToDo List</h1>
+    <% }else { %>
+    <h1 style="color: blue"><%= keyday %> ToDo List</h1>
+    <% } %> -->
+    <footer>"Each day I will accomplish atleast one thing on my to-do list."</footer>
+  </body>
+</html>

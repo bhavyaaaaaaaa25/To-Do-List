@@ -56,6 +56,16 @@ app.post("/",function(req,res){  //this is for when something is posted on the h
 res.redirect("/");   //will take to app.get
 
 })
+
+
+
+app.post("/delete",function(req,res){
+  
+  
+  var item= req.body.new;
+  itemarray.pop(item);
+  res.redirect("/"); 
+})
 app.listen(3000, function () {
   console.log("The port is 3000");
 });

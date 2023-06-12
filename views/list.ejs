@@ -13,20 +13,23 @@
 
     <div class="box">
      <!-- <ul> -->
+      <form action="/delete" method ="post">
         <% for (var i=0;i<newItemArrayInEjs.length;i++) {  %>
             <div class="item">
                 <input type="checkbox">
                   <p> <%= newItemArrayInEjs[i] %> </p>
+                  <button type ="submit" name="Add to List">❌</button>
                 </div>
       <%  } %>
-        
+    </form>
      <!-- </ul> -->
     
 
      <form action = "/" method = "POST">
 
         <input type="text" name="new" placeholder="My Next Task Is.." autofocus autocomplete="off">
-        <button type ="submit" name="Add to List">+</button>
+        <button type ="submit" name="Add to List">➕</button>
+        
     </form></div>
     <!-- <% if (keyday === "Saturday" || keyday === "Sunday") { %>
     <h1 style="color: purple"><%= keyday %> ToDo List</h1>
